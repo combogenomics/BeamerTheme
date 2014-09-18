@@ -1,0 +1,88 @@
+% Copyright 2014 by Giovanni Bacci (djbrh83@gmail.com)
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+
+\mode<presentation>
+
+\usefonttheme{professionalfonts}
+
+% ----------------------------------------------------------------------------
+% *** TITLE PAGE <<<
+% ----------------------------------------------------------------------------
+\defbeamertemplate*{title page}{giova title}{%
+%	\makebox[\linewidth]{\rule{\paperwidth}{0.5pt}}\par
+%	\vskip-12pt
+%	\makebox[\linewidth]{\rule{\paperwidth}{0.5pt}}\par
+	\begin{beamercolorbox}[wd=\paperwidth, sep=5mm, right]{institute/author title page}%
+		\leavevmode
+		\hbox{%
+			\begin{minipage}[c]{0.3\textwidth}
+				\pgfuseimage{BIGLogo}
+			\end{minipage}
+			\begin{minipage}{0.7\textwidth}%
+				\begin{flushright}
+					\hfill\usebeamerfont{author}\insertauthor\par
+					\vspace{3pt}
+					\usebeamerfont{institute}\usebeamercolor[fg]{institute}\insertinstitute\par
+				\end{flushright}				
+			\end{minipage}%
+		}%
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=\paperwidth, sep=5mm, right]{title title page}%
+		\usebeamerfont{title}\inserttitle\par
+		\vspace{5pt}
+		\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+	\end{beamercolorbox}%
+	\vfill
+%	\makebox[\linewidth]{\rule{\paperwidth}{0.5pt}}\par
+%	\vskip-12pt
+%	\makebox[\linewidth]{\rule{\paperwidth}{0.5pt}}\par
+	\vspace{5pt}
+	\begin{beamercolorbox}[wd=\paperwidth, sep=5mm, right]{date title page}%
+%	\begin{minipage}[t]{\textwidth}
+%		\begin{flushright}
+			\small\insertdate
+%		\end{flushright}		
+%	\end{minipage}
+	\end{beamercolorbox}%
+}%
+
+% ----------------------------------------------------------------------------
+% *** END TITLE PAGE >>>
+% ----------------------------------------------------------------------------
+
+
+% ----------------------------------------------------------------------------
+% *** BLOCKS <<<
+% ----------------------------------------------------------------------------
+\setbeamertemplate{blocks}[rounded][shadow=false] % remove the shadow in the blocks and set the rounded square as shape
+% ----------------------------------------------------------------------------
+% *** END BLOCKS >>>
+% ----------------------------------------------------------------------------
+
+% ----------------------------------------------------------------------------
+% *** BIBLIOGRAPHY <<<
+% ----------------------------------------------------------------------------
+\setbeamertemplate{bibliography item}[text]
+\bibliographystyle{apalike}
+% ----------------------------------------------------------------------------
+% *** END BIBLIOGRAPHY <<<
+% ----------------------------------------------------------------------------
+
+% ----------------------------------------------------------------------------
+% *** ITEMS <<<
+% ----------------------------------------------------------------------------
+\setbeamertemplate{items}[circle] % put a circle befor each item in an itemize list
+\setbeamertemplate{enumerate items}[default]
+% ----------------------------------------------------------------------------
+% *** END ITEMS >>>
+% ----------------------------------------------------------------------------
+
+\setbeamertemplate{navigation symbols}{} % remove the navigation symbols at the page bottom
+
+
+\mode
+<all>

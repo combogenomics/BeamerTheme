@@ -1,0 +1,81 @@
+% Copyright 2014 by Giovanni Bacci (djbrh83@gmail.com)
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+
+\mode<presentation>
+
+\RequirePackage{lmodern}
+
+% ----------------------------------------------------------------------------
+% *** LENGTHS <<<
+% ----------------------------------------------------------------------------
+\newlength{\ulogowidth}
+\setlength{\ulogowidth}{1cm}
+
+\newlength{\biglogowidth}
+\setlength{\biglogowidth}{3cm}
+
+% ----------------------------------------------------------------------------
+% *** END LENGTHS <<<
+% ----------------------------------------------------------------------------
+
+% ----------------------------------------------------------------------------
+% *** IMAGES <<<
+% ----------------------------------------------------------------------------
+
+\pgfdeclareimage[width=\ulogowidth]{ULogo}{./images/logo}
+\pgfdeclareimage[width=\biglogowidth]{BIGLogo}{./images/logo_big}
+
+% ----------------------------------------------------------------------------
+% *** END IMAGES <<<
+% ----------------------------------------------------------------------------
+
+
+% ----------------------------------------------------------------------------
+% *** HEADLINE <<<
+% ----------------------------------------------------------------------------
+% Starred version sets this template automatically
+% Otherwise I will have to call: \setbeamertemplate{headline}[giova headline]
+\defbeamertemplate*{headline}{giova headline}{%
+    \leavevmode
+	\hbox{%
+	\begin{beamercolorbox}[wd=0.9\paperwidth, ht=10pt, dp=10pt, left]{navigation frame}%
+		\insertnavigation{0.9\paperwidth}
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=0.1\paperwidth, ht=10pt, dp=10pt, left]{header logo section}%
+	\begin{minipage}[c]{0.1\paperwidth}
+		\vspace{3pt}
+		\hspace{2pt}
+		\pgfuseimage{ULogo}
+	\end{minipage}
+	\end{beamercolorbox}%
+	}%
+}%
+% ----------------------------------------------------------------------------
+% *** END HEADLINE <<<
+% ----------------------------------------------------------------------------
+
+% ----------------------------------------------------------------------------
+% *** FOOTLINE <<<
+% ----------------------------------------------------------------------------
+\defbeamertemplate*{footline}{giova footline}{%
+	\leavevmode
+	\hbox{%
+	\begin{beamercolorbox}[wd=0.4\paperwidth, ht=5pt, dp=1pt,center]{author in head/foot}%
+		\insertshortauthor
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=0.6\paperwidth, ht=5pt, dp=1pt,right]{date in head/foot}%
+    		\insertdate\hspace{3pt}
+	\end{beamercolorbox}%
+	}%
+}%
+
+% ----------------------------------------------------------------------------
+% *** END FOOTLINE <<<
+% ----------------------------------------------------------------------------
+
+\mode
+<all>

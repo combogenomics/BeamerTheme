@@ -1,0 +1,56 @@
+\documentclass[12pt,a4paper]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usetheme{Combo}
+\title{Title}
+\author{Firtname Lastname}
+\subtitle{Subtitle}
+\institute{Institue}
+
+\begin{document}
+
+\begin{frame}[plain]
+	\maketitle
+\end{frame}
+
+\section{Block}
+\subsection{}
+\begin{frame}
+	\begin{block}{Block Title}
+		Block text
+	\end{block}
+	\begin{alertblock}{Alert Block Title}
+		Alert block text
+	\end{alertblock}
+	\begin{example}{Example Title}
+		Example text
+	\end{example}
+\end{frame}
+
+\section{Items}
+\subsection{}
+\begin{frame}
+	\begin{itemize}
+		\item Item number one
+		\begin{itemize}
+			\item Subitem number one
+			\begin{itemize}
+				\item Subsubitem number one
+			\end{itemize}
+		\end{itemize}
+		\item Item number two
+		\item Item number three
+	\end{itemize}
+	\begin{enumerate}
+		\item Item number one
+		\begin{enumerate}
+			\item Subitem number one
+			\begin{enumerate}
+				\item Subsubitem number one
+			\end{enumerate}
+		\end{enumerate}
+		\item Item number two
+		\item Item number three
+	\end{enumerate}
+\end{frame}
+\end{document}
