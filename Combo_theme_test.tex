@@ -7,14 +7,28 @@
 \subtitle{Subtitle}
 \institute{Institue}
 
+% Print the table of content at the beginning of each section.
+% The current section will be highlighted whereas the other ones 
+% will be shaded
+\AtBeginSection[]
+{
+  \begin{frame}{Table of Content}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
 \begin{document}
 
 \begin{frame}[plain]
 	\maketitle
 \end{frame}
 
+\begin{frame}{Table of Content}
+	\tableofcontents
+\end{frame}
+
 \section{Block}
-\subsection{}
+\subsection{Block1}
 \begin{frame}{Frame title}
 	\begin{block}{Block Title}
 		Block text
@@ -28,7 +42,7 @@
 \end{frame}
 
 \section{Items}
-\subsection{}
+\subsection{Items1}
 \begin{frame}
 	\begin{itemize}
 		\item Item number one
@@ -54,11 +68,14 @@
 	\end{enumerate}
 \end{frame}
 
+\section{Testing References}
+\subsection{References1}
 \begin{frame}
 	Testing bibliography \cite{article2014test}
 \end{frame}
 
-\begin{frame}
+\section*{}
+\begin{frame}[allowframebreaks, t]
 	\bibliography{References}
 \end{frame}
 \end{document}
